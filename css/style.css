@@ -69,7 +69,17 @@ h1 {
 
 #map-canvas {
 	height: 100%;
+	width: 100%;
 }
 
+span.loading {
+	display: block;
+	text-align: center;
+	font-family: Source Sans Pro, Arial, sans-serif;
+	font-weight: 600;
+	color: #1d325f;
+	font-size: 18px;
+	line-height: 1.4em;
+}
 
 
