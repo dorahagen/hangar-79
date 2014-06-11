@@ -1,18 +1,35 @@
-body {
-	background: #e2e2e2;
-}
-
-header {
-	width: 200px;
-	background: #5ac5f1;
-	position: absolute;
-	top: 0;
-	left: 0;
+html {
 	height: 100%;
 }
 
+body {
+	height: 100%;
+	margin: 0;
+	padding::0;
+	background: #5ac5f1;
+}
+
+header {
+	float: left;
+	width: 20%;
+	background: #5ac5f1;
+	position: relative;
+}
+
+main {
+	float: left;
+	width: 80%;
+	height: 100%;
+	position: relative;
+}
+
+#logo-container {
+	text-align: center;
+}
+
 #logo {
-	padding-bottom: 10px;
+	max-width: 100%;
+	height: auto;
 }
 
 p {
@@ -36,11 +53,7 @@ a:hover {
 
 #title {
 	background: #1d325f;
-	width: 100%;
 	padding: 20px;
-	top: 0;
-	float: left;
-	margin-left: 200px;
 }
 
 h1 {
@@ -54,13 +67,9 @@ h1 {
 	margin-left: -200px;
 }
 
-#main {
-	margin-left: 200px;
+#map-canvas {
+	height: 100%;
 }
 
-#map {
-	max-width: 100%;
-	height: auto;
-}
 
 
