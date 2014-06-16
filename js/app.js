@@ -76,9 +76,16 @@
 
 					// New panTo links test
 					$("#area-yellow").on("click", function() {
-						var laLatLng = new google.maps.LatLng(1,1);
-						map.panTo(laLatLng);
+						var LatLng = new google.maps.LatLng(5,6);
+						map.panTo(LatLng);
 						map.setZoom(4);
 					});
+
+					// This isn't working:
+					//$("#area-yellow").on("click", function() {
+					//	map.setZoom(4);
+					//	map.panTo('4/5/6.jpg'.getPosition());
+					//});
+
 
 				};
