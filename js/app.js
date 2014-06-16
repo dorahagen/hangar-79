@@ -54,11 +54,11 @@
 						},
 						tileSize: new google.maps.Size(256, 256),
 						maxZoom: 5,
-						name: 'PS_Bramus.GoogleMapsTileCutter'
+						name: 'hangarConcept'
 					});
 
 					// Basic options for our map
-					var myOptions = {
+					var mapOptions = {
 						center: new google.maps.LatLng(0, 0),
 						zoom: 2,
 						minZoom: 0,
@@ -70,8 +70,15 @@
 					};
 
 					// Init the map and hook our custom map type to it
-					var map = new google.maps.Map(document.getElementById('map-canvas'), myOptions);
+					var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 					map.mapTypes.set('custom', customMapType);
 					map.setMapTypeId('custom');
 
-				}
+					// New panTo links test
+					$("#area-yellow").on("click", function() {
+						var laLatLng = new google.maps.LatLng(1,1);
+						map.panTo(laLatLng);
+						map.setZoom(4);
+					});
+
+				};
