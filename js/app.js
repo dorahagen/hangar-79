@@ -74,18 +74,33 @@
 					map.mapTypes.set('custom', customMapType);
 					map.setMapTypeId('custom');
 
-					// New panTo links test
+					// Set coordinates for nav links
 					$("#area-yellow").on("click", function() {
-						var LatLng = new google.maps.LatLng(5,6);
+						var LatLng = new google.maps.LatLng(30, -50);
 						map.panTo(LatLng);
 						map.setZoom(4);
 					});
 
-					// This isn't working:
-					//$("#area-yellow").on("click", function() {
-					//	map.setZoom(4);
-					//	map.panTo('4/5/6.jpg'.getPosition());
-					//});
+					$("#area-bridge").on("click", function() {
+						var LatLng = new google.maps.LatLng(40, 50);
+						map.panTo(LatLng);
+						map.setZoom(4);
+					});
+					$("#area-theater").on("click", function() {
+						var LatLng = new google.maps.LatLng(30, 95);
+						map.panTo(LatLng);
+						map.setZoom(4);
+					});
+					$("#area-reset").on("click", function() {
+						var LatLng = new google.maps.LatLng(0, 0);
+						map.panTo(LatLng);
+						map.setZoom(2);
+					});
 
 
 				};
+
+
+
+
+
