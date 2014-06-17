@@ -36,13 +36,13 @@
 
 
 			/*
-			 * Main Core
+			 * Main functionality
 			 * ----------------
 			 */
 
 				window.onload = function() {
 
-					// Define our custom map type
+					// Define custom map type
 					var customMapType = new google.maps.ImageMapType({
 						getTileUrl: function(coord, zoom) {
 							var normalizedCoord = getNormalizedCoord(coord, zoom);
@@ -57,7 +57,7 @@
 						name: 'hangarConcept'
 					});
 
-					// Basic options for our map
+					// Basic options for map
 					var mapOptions = {
 						center: new google.maps.LatLng(0, 0),
 						zoom: 2,
@@ -69,12 +69,12 @@
 						}
 					};
 
-					// Init the map and hook our custom map type to it
+					// Initiate the map and hook custom map type to it
 					var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 					map.mapTypes.set('custom', customMapType);
 					map.setMapTypeId('custom');
 
-					// Set coordinates for nav links
+					// Define areas that we're zooming in on
 					$("#area-yellow").on("click", function() {
 						var LatLng = new google.maps.LatLng(30, -50);
 						map.panTo(LatLng);
@@ -86,17 +86,18 @@
 						map.panTo(LatLng);
 						map.setZoom(4);
 					});
+
 					$("#area-theater").on("click", function() {
 						var LatLng = new google.maps.LatLng(30, 95);
 						map.panTo(LatLng);
 						map.setZoom(4);
 					});
+
 					$("#area-reset").on("click", function() {
 						var LatLng = new google.maps.LatLng(0, 0);
 						map.panTo(LatLng);
 						map.setZoom(2);
 					});
-
 
 				};
 
